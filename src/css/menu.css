@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../assets/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'bold';
+    src: url('../assets/fonts/Roboto-Bold.ttf');
+}
+
+body{
+    font-family: 'roboto';
+    background-color: hsl(235, 18%, 26%);
+}
+h1{
+    font-family: 'bold';
+}
+p{
+    font-size: 16px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }

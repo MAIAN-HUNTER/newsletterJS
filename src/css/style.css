@@ -1,0 +1,154 @@
+main {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: white;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 1rem;
+}
+
+.container p {
+  padding-left: 20px;
+  padding-top: -30px;
+}
+
+h1 {
+  font-size: 40px;
+  padding: 30px 20px 0px;
+}
+
+.benefits {
+  padding-left: 40px;
+}
+
+.benefits li {
+  list-style-image: url("../assets/images/icon-list.svg");
+  padding: 1px 5px;
+  font-size: 14px;
+}
+
+.adress-invalid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.email .adress {
+  font-size: 10px;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  font-weight: 700;
+}
+
+.invalid {
+  font-size: 10px;
+  color: hsl(4, 100%, 67%);
+  padding-right: 25px;
+  font-weight: 700;
+  visibility: hidden;
+}
+
+.span-required{
+  color: red;
+  font-size: 10px;
+  padding-right: 25px;
+  font-weight: 700;
+  visibility: hidden;
+}
+
+.error span {
+  color: hsl(4, 100%, 67%);
+  border-color: hsl(4, 100%, 67%);
+  visibility: visible;
+}
+
+.error input {
+  border-color: hsl(4, 100%, 67%);
+  background-color: hsl(3, 90%, 92%);
+}
+
+.error input::placeholder {
+  color: hsl(4, 100%, 67%);
+}
+
+
+.email {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.email input {
+  padding: 15px;
+  width: 266px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.subs {
+  max-width: 280px;
+  background-color: hsl(235, 18%, 26%);
+  padding: 15px 10px;
+  margin-left: 20px;
+  text-align: center;
+  border-radius: 6px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+.subs:hover {
+  background-color: hsl(10, 100%, 67%);
+  box-shadow: 0px 0px 20px hsl(4, 100%, 67%);
+  transition: 0.2s;
+}
+
+.graphic img {
+  max-height: 100%;
+  margin-right: -80px;
+}
+
+.graphic {
+  max-height: 480px;
+}
+
+.ready {
+  visibility: hidden;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 1rem;
+  border-radius: 16px;
+  background-color: white;
+  max-width: 365px;
+  max-height: 300px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.ready img {
+  max-width: 15%;
+}
+
+.dismiss {
+  background-color: hsl(235, 18%, 26%);
+  border-radius: 6px;
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dismiss:hover {
+  background-color: hsl(10, 100%, 67%);
+  box-shadow: 0px 0px 20px hsl(4, 100%, 67%);
+  transition: 0.2s;
+}
