@@ -1,7 +1,10 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box
 }
+
+@import url("https://fontawesome.com/icons/check?f=classic&s=solid");
 
 @font-face {
     font-family: 'roboto';
@@ -13,11 +16,9 @@
     src: url('../assets/fonts/Roboto-Bold.ttf');
 }
 
-body{
-    font-family: 'roboto';
-    background-color: hsl(235, 18%, 26%);
-}
-h1{
+
+
+h2{
     font-family: 'bold';
 }
 p{

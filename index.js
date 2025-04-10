@@ -1,47 +1,24 @@
-const form = document.getElementById("form");
-const email = document.getElementById("email");
-const submited = document.querySelector(".ready");
-const submit = document.getElementById("send");
-const emailRegex =
-  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;  
+const formContainer = document.querySelector(".container");
+const inputEl = document.querySelector("form input");
+const btnSubmit = document.querySelector(".subscribe_btn");
+const successEl = document.querySelector(".ready");
+const btnDismiss = document.querySelector (".dismiss")
 
-  form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  checkInputEmail();
-  emailValidate();
-  })
-
-  function subscribe(){
-      submited.classList.toggle("submit")
-  }
-
-  document.getElementById("close").onclick = function(){
-    document.querySelector(".ready").classList.remove("submit");
-  }
-
-  function errorInput(input){
-    const formItem = input.parentElement;
-    formItem.querySelector("span")
-
-    formItem.className = "email error" 
-  }
-
-  function validateEmail(email){
-    const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    return emailRegex.test(email);
-}
-
-
-function checkInputEmail(){
-  const emailValue = email.value;
-  if(emailValue=== ""){
-    errorInput(email)
-  }
-  else {
+  btnSubmit.addEventListener("click", () => {
     
-    ; 
-    
-  }
-}
- 
+      if(inputEl.value !== ""){
+        formContainer.classList.add("hide");
+        successEl.classList.remove("hide");
+        document.querySelector(".error p").innerHTML = "";
+      }else{
+        document.querySelector(".error p").innerHTML = "Valid Email Required";
+        inputEl.classList.add("active");
+      }
+  });
+
+  btnDismiss.addEventListener("click", () => {
+    formContainer.classList.remove("hide");
+    successEl.classList.add("hide");
+    inputEl.value = "";
+    inputEl.classList.remove("active");
+  });

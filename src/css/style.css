@@ -1,102 +1,120 @@
-main {
+body{
+  font-family: 'roboto';
+  background-color: hsl(235, 18%, 26%);
   display: flex;
-  justify-content: center;
-  padding: 20px;
-  border-radius: 16px;
-  background-color: white;
-  max-width: 700px;
-  margin: 0 auto;
-  margin-top: 100px;
+  justify-content: center;  
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
   display: flex;
-  flex-direction: column;
   padding: 20px;
   gap: 1rem;
+  justify-content: center;
+  border-radius: 16px;
+  background-color: white;
+  width: 100%;
+  height: 100%;
 }
 
-.container p {
-  padding-left: 20px;
-  padding-top: -30px;
+.container.hide{
+display: none;
 }
 
-h1 {
-  font-size: 40px;
-  padding: 30px 20px 0px;
+.container p{
+  padding-bottom: 1px;
 }
 
-.benefits {
-  padding-left: 40px;
-}
-
-.benefits li {
-  list-style-image: url("../assets/images/icon-list.svg");
-  padding: 1px 5px;
-  font-size: 14px;
-}
-
-.adress-invalid {
+.container .content{
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+
+}
+.content p{
+  font-size: 16px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.content ul {
+  padding-top: 5px;
+  font-weight: 400;
+  list-style-type: none;
+  margin: 1rem 0;
+}
+
+.content ul li {
+  margin-top:1rem ;
+  font-size: 16px;
+}
+
+.content ul li i{
+  background-color:  hsl(4, 100%, 67%);
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem;
+  margin-right: 1rem;
+  
+}
+
+
+.content input {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.9rem 0rem;
+  border-radius: 6px;
+  color: hsl(0, 0%, 100%);
+  outline: none;
+  font-family: inherit;
+  font-size: 1rem;
+  }
+
+  .content input::placeholder{
+    padding: 1rem;
+  }
+
+.error{
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
-.email .adress {
-  font-size: 10px;
-  justify-content: space-between;
-  padding-bottom: 10px;
-  padding-left: 0px;
-  font-weight: 700;
+.content label{color: hsl(235, 18%, 26%);
+  font-weight: 600;
 }
 
-.invalid {
-  font-size: 10px;
+.content .error p {
   color: hsl(4, 100%, 67%);
-  padding-right: 25px;
-  font-weight: 700;
-  visibility: hidden;
+  padding: 0;
 }
 
-.span-required{
-  color: red;
-  font-size: 10px;
-  padding-right: 25px;
-  font-weight: 700;
-  visibility: hidden;
-}
-
-.error span {
-  color: hsl(4, 100%, 67%);
-  border-color: hsl(4, 100%, 67%);
-  visibility: visible;
-}
-
-.error input {
+.content input.active {
   border-color: hsl(4, 100%, 67%);
   background-color: hsl(3, 90%, 92%);
 }
 
-.error input::placeholder {
-  color: hsl(4, 100%, 67%);
+.content input.active::placeholder {
+ color: hsl(4, 100%, 67%);
 }
 
-
-.email {
-  padding-top: 20px;
-  padding-left: 20px;
-}
-.email input {
-  padding: 15px;
-  width: 266px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.subs {
-  max-width: 280px;
+.content button {
+  width: 101%;
   background-color: hsl(235, 18%, 26%);
-  padding: 15px 10px;
-  margin-left: 20px;
+  margin: 0.5rem 0;
+  padding: 0.9rem 0rem;
   text-align: center;
   border-radius: 6px;
   color: hsl(0, 0%, 100%);
@@ -105,50 +123,118 @@ h1 {
 }
 
 
-.subs:hover {
+.content button:hover {
   background-color: hsl(10, 100%, 67%);
   box-shadow: 0px 0px 20px hsl(4, 100%, 67%);
   transition: 0.2s;
 }
 
-.graphic img {
-  max-height: 100%;
-  margin-right: -80px;
-}
-
-.graphic {
-  max-height: 480px;
-}
 
 .ready {
-  visibility: hidden;
-  justify-content: center;
-  flex-direction: column;
-  padding: 20px;
-  gap: 1rem;
-  border-radius: 16px;
-  background-color: white;
-  max-width: 365px;
-  max-height: 300px;
-  margin: 0 auto;
-  margin-top: 100px;
+max-width: 450px;
+padding: 2rem;
+background-color: white;
+border-radius: 10px;
+box-shadow: 5px 10px 5px rgba(0, 0, 0, 0);
+}
+
+.ready.hide{
+  display: none;
 }
 
 .ready img {
-  max-width: 15%;
+  max-width: 25%;
 }
 
-.dismiss {
+.ready h2{
+  font-size: 3rem;
+  padding: 10px 10px;
+  margin: 0.5rem 0;
+}
+
+.ready p{
+  margin: -10px;
+  padding: 10px 20px;
+}
+
+
+
+.dismiss button{
+  width: 360px;
+  height: 50px;
+  font-family: 'bold';
   background-color: hsl(235, 18%, 26%);
   border-radius: 6px;
-  padding: 10px;
-  margin: 20px;
+  padding: 8px;
+  margin: 30px 10px;
   text-align: center;
   cursor: pointer;
+  color:white;
 }
 
-.dismiss:hover {
+.dismiss button:hover {
+  background-color: hsl(4, 100%, 67%);
   background-color: hsl(10, 100%, 67%);
   box-shadow: 0px 0px 20px hsl(4, 100%, 67%);
   transition: 0.2s;
+}
+
+@media ( max-width: 600px) {
+  .container {
+    flex-direction: column-reverse;
+    width: 370px;
+    height: 820px;
+    padding: 0px;
+    padding-bottom: -10px;
+}
+  .content{
+    padding: 0px 30px 30px 30px;
+    display: flex;
+    width: 100%;
+
+  }
+
+  .content h1{
+    font-size: 2.4rem;
+    margin: 1rem 0;
+  }
+
+  .graphic{
+  content: url("../assets/images/illustration-sign-up-mobile.svg");
+  width: 100%;
+  bottom: 20px;
+}
+
+.content form{
+    width: 300px;
+}
+
+.ready {
+  width: 400px;
+  height: 820px;
+  border-radius: 0%;
+}
+
+.ready img{
+  padding-top: 120px;
+}
+
+.ready h2{
+  font-size: 2.4rem;
+  padding: 20px 10px 10px;
+}
+
+.ready p {
+  padding: 20px 20px 200px;
+}
+
+.dismiss{
+  padding: 57px  20px 0px 0px
+}
+
+.dismiss button{
+  width: 322px;
+  height: 55px;
+  /* // USAR O PADDING AQUI NO BUTTON PARA PREENCER O ESPAÇO NECESSAARIO/  */
+}
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link
       rel="icon"
       type="image/png"
@@ -15,62 +16,54 @@
 
   </head>
   <body>
-    <main>
-      <div id="form" class="container">
+    <div class="wrapper">       
+      <div class="container">
+        <div class="content">
         <h1>Stay updated!</h1>
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul class="benefits">
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
+        <ul>
+          <li>
+             <i class="fa fa-check"></i>Product discovery and building what matters
+            </li>
+          <li>
+            <i class="fa fa-check"></i>Measuring to ensure updates are a success
+          </li>
+          <li>
+            <i class="fa fa-check"></i>And much more!
+          </li>
         </ul>
         
-        <div class="email">
-          <div class="adress-invalid">
-            <p class="adress">Email address</p>
-            <span class="invalid">The field is left empty</span>
-            <a class="span-required">must have 3 characters</a>
+        <div class="error">
+            <label for="email">Email address</label>
+            <p class="error"></p>
+          </div>  
+          <form action="#">
+            <label for="email"></label>
+            <input type="email" id="email" placeholder="email@company.com"
+            />
+            <button
+            type="button" class="subscribe_btn" >
+            Subscribe to monthly newsletter
+          </button>
+          </form>
           </div>
-          
-          
-          <label for="email"></label>
-          <input type="email" id="email" placeholder="email@company.com" oninput="checkInputEmail()"/>
-          
+        <div class="graphic">
+          <img src="/src/assets/images/illustration-sign-up-desktop.svg" alt="">
         </div>
-
-        <div class="subs">
-          <span onclick="subscribe()" id="send" type="submit" >Subscribe to monthly newsletter</span>
-        </div>
-          
       </div>
-      <div class="graphic">
-        <img src="/src/assets/images/illustration-sign-up-desktop.svg" alt="">
-      </div>
-
-    
-      </div>
-    </main>
-
-      <div class="ready">
+        
+      <div class="ready hide">
         <img src="./src/assets/images/icon-success.svg" />
 
-        <h1>Thanks for subscribing!</h1>
+        <h2>Thanks for subscribing!</h2>
         <p>
           A confirmation email has been sent to ash@loremcompany.com. Please
           open it and click the button inside to confirm your subscription.
         </p>
-
         <div class="dismiss">
           <button id="close">Dismiss message</button>
         </div>
         </div>
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
     <script src="./index.js"></script>
   </body>
 </html>
